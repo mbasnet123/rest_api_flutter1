@@ -13,14 +13,16 @@ class EmployeeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Employee Data"),
+        title: const Text("Employee Data"),
       ),
       body: Column(
         children: [
           ElevatedButton(onPressed: (){
             // _fetchEmployeeData();
-            EmployeeServices().getAllEmployeeData();
-          }, child: Text("Click to get employee data"))
+            // EmployeeServices().getAllEmployeeData();
+            print(EmployeeServices().getAllEmployeeData(),);
+          }, child: const Text("Click to get employee data"),),
+          const Text("")
         ],
       ),
     );
