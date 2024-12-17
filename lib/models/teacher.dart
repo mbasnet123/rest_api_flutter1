@@ -1,9 +1,9 @@
 class Teacher {
-  int id;
-  String industry;
-  String location;
-  String phoneNumber;
-  String teacherName;
+  int? id;
+  String? industry;
+  String? location;
+  String? phoneNumber;
+  String? teacherName;
 
   Teacher(
       {required this.id,
@@ -11,6 +11,14 @@ class Teacher {
       required this.location,
       required this.phoneNumber,
       required this.teacherName});
+
+  Teacher.fromJson(Map<String, dynamic> json){
+    id = json["id"];
+    industry = json["industry"];
+    location = json["location"];
+    phoneNumber = json["phoneNumber"];
+    teacherName = json["teacherName"];
+  }
 }
 
 
